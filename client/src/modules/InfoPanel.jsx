@@ -77,7 +77,6 @@ const InfoPanel = () => {
               backgroundColor: "#0f2031",
               borderRadius: 6,
               marginBottom: 25,
-              // border: "1px solid #0f2031",
               border: theme.palette.border.primary,
               transition:
                 "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
@@ -115,7 +114,6 @@ const InfoPanel = () => {
               backgroundColor: "#0f2031",
               borderRadius: 6,
               marginBottom: 25,
-              // border: "1px solid #0f2031",
               border: theme.palette.border.primary,
               transition:
                 "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
@@ -150,7 +148,6 @@ const InfoPanel = () => {
               borderRadius: 6,
               marginBottom: 25,
               padding: 15,
-              // border: "3px solid #0f2031",
               border: theme.palette.border.primary,
               color: "#496673",
               resize: "none",
@@ -181,7 +178,6 @@ const InfoPanel = () => {
               backgroundColor: "#0f2031",
               borderRadius: 6,
               marginBottom: 25,
-              // border: "3px solid #0f2031",
               border: theme.palette.border.primary,
               color: "#496673",
               resize: "none",
