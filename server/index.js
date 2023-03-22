@@ -1,7 +1,6 @@
 require("dotenv").config();
 const { setMessage } = require("./functions/setMessage");
 const { Configuration, OpenAIApi } = require("openai");
-//import key from .env
 const express = require("express");
 const configuration = new Configuration({
   organization: process.env.OPENAI_ORGANIZATION,
