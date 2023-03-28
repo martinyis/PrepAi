@@ -27,7 +27,6 @@ const useStyles = makeStyles({
 });
 function NavBar(props) {
   const classes = useStyles();
-  const theme = createTheme();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -59,7 +58,7 @@ function NavBar(props) {
   return (
     <Box className={classes.mainHeader} sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar className={classes.mainHeader} component="nav" theme={theme}>
+      <AppBar color="primary" component="nav" theme={theme}>
         <Toolbar>
           <IconButton
             color="inherit"
