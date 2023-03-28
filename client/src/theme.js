@@ -10,7 +10,7 @@ const theme = createTheme({
     },
     background: {
       default: "rgb(15, 29, 46, 1)",
-      paper: "rgb(36, 86, 102)",
+      paper: "rgb(14, 43, 61, 1)",
       header: "rgb(11, 53, 69, 1)",
     },
     text: {
