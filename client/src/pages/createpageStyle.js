@@ -32,6 +32,7 @@ export const styles = {
   panelInput: {
     backgroundColor: "#0f2031",
     borderRadius: 6,
+    marginTop: 35,
     border: "1px solid #0f2031",
     transition: "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
     "&:hover": {
