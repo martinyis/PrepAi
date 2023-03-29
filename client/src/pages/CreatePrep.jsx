@@ -2,47 +2,38 @@ import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
+import { TextField } from "@material-ui/core";
+import { styles } from "./createpageStyle.js";
 const CreatePrep = () => {
   const theme = useTheme();
+  const [courseHeight, setCourseHeight] = useState("");
+
+  const handleCourseHeightChange = (event) => {
+    setCourseHeight(event.target.value);
+  };
+
   return (
     <div>
-      <Box
-        sx={{
-          paddingTop: 30,
-          paddingBottom: 10,
-          backgroundColor: theme.palette.background.default,
-          height: "100vh",
-        }}
-      >
-        <Box
-          className="info__panels"
-          sx={{
-            px: {
-              xs: 5,
-              sm: 10,
-              md: 10,
-            },
-            display: "flex",
-            gap: {
-              xs: theme.spacing(0.5), // set gap to 2 for screen sizes below sm
-              md: theme.spacing(1.5),
-              sm: theme.spacing(1), // set gap to 4 for screen sizes sm and up
-            },
-            width: "100%",
-            justifyContent: "center",
-            height: "100%",
-          }}
-        >
-          <Box
-            sx={{
-              backgroundColor: theme.palette.background.paper,
-              width: "100%",
-              borderRadius: 6,
-            }}
-          >
+      <Box sx={styles.root}>
+        <Box className="info__panels" sx={styles.infoPanels}>
+          <Box className="info_panels-panel" sx={styles.infoPanel}>
             <Typography variant="h4">Create Prep</Typography>
+            <form>
+              <Box sx={{ paddingBottom: theme.spacing(0) }}>
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  id="course-height-input"
+                  label="Course"
+                  value={courseHeight}
+                  onChange={handleCourseHeightChange}
+                  style={styles.panelInput}
+                />
+              </Box>
+            </form>
           </Box>
           <Box
+            className="info_panels-panel"
             sx={{
               backgroundColor: theme.palette.background.paper,
               width: "100%",
