@@ -1,5 +1,8 @@
 import { createTheme } from "@material-ui/core/styles";
 const theme = createTheme({
+  typography: {
+    fontFamily: ["Cyntho Next", "Roboto", "Arial", "sans-serif"].join(","),
+  },
   palette: {
     primary: {
       main: "rgb(10, 60, 74, 1)",
