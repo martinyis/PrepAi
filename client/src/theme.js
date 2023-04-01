@@ -2,6 +2,10 @@ import { createTheme } from "@material-ui/core/styles";
 const theme = createTheme({
   typography: {
     fontFamily: ["Cyntho Next", "Roboto", "Arial", "sans-serif"].join(","),
+    h3: {
+      color: "#496673",
+      fontSize: "2rem",
+    },
   },
   palette: {
     primary: {

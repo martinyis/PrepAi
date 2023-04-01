@@ -9,8 +9,8 @@ const InfoPanel = () => {
   const [formData, setFormData] = useState({
     courseHeight: "",
     topic: "",
-    description: "",
-    requirements: "",
+    notes: "",
+    addInfo: "",
   });
 
   const handleChange = (event) => {
@@ -39,6 +39,15 @@ const InfoPanel = () => {
             flexDirection: "column",
           }}
         >
+          <Typography
+            style={{
+              paddingBottom: 10,
+              paddingLeft: 10,
+            }}
+            variant="h3"
+          >
+            Course
+          </Typography>
           <TextField
             fullWidth
             variant="outlined"
@@ -50,7 +59,7 @@ const InfoPanel = () => {
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,
-              marginTop: 35,
+              marginBottom: 25,
               border: "1px solid #0f2031",
               transition:
                 "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
@@ -60,6 +69,15 @@ const InfoPanel = () => {
               },
             }}
           />
+          <Typography
+            style={{
+              paddingBottom: 10,
+              paddingLeft: 10,
+            }}
+            variant="h3"
+          >
+            Topic
+          </Typography>
           <TextField
             fullWidth
             variant="outlined"
@@ -71,7 +89,7 @@ const InfoPanel = () => {
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,
-              marginTop: 35,
+              marginBottom: 25,
               border: "1px solid #0f2031",
               transition:
                 "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
@@ -81,50 +99,62 @@ const InfoPanel = () => {
               },
             }}
           />
+          <Typography
+            style={{
+              paddingBottom: 10,
+              paddingLeft: 10,
+            }}
+            variant="h3"
+          >
+            Add your notes
+          </Typography>
           <TextareaAutosize
             fullWidth
             minRows={9}
             maxRows={9}
             variant="outlined"
-            id="description-input"
-            label="Description"
-            name="description"
-            value={formData.description}
+            id="notes-input"
+            label="Notes"
+            name="notes"
+            value={formData.notes}
             onChange={handleChange}
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,
-              marginTop: 35,
-              border: "1px solid #0f2031",
-              transition:
-                "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
-              "&:hover": {
-                borderColor: "#0f2031",
-                borderRadius: 10,
-              },
+              marginBottom: 25,
+              padding: 15,
+              border: "3px solid #0f2031",
+              color: "#496673",
+              resize: "none",
             }}
           />
+          <Typography
+            style={{
+              paddingBottom: 10,
+              paddingLeft: 10,
+            }}
+            variant="h3"
+          >
+            Additional info
+          </Typography>
           <TextareaAutosize
             fullWidth
             minRows={9}
             maxRows={9}
             variant="outlined"
-            id="requirements-input"
-            label="Requirements"
-            name="requirements"
-            value={formData.requirements}
+            id="addInfo-input"
+            label="AddInfo"
+            name="addInfo"
+            value={formData.addInfo}
             onChange={handleChange}
             style={{
+              padding: 15,
               backgroundColor: "#0f2031",
               borderRadius: 6,
-              marginTop: 35,
-              border: "1px solid #0f2031",
-              transition:
-                "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
-              "&:hover": {
-                borderColor: "#0f2031",
-                borderRadius: 10,
-              },
+              marginBottom: 25,
+              border: "3px solid #0f2031",
+              color: "#496673",
+              resize: "none",
             }}
           />
         </Box>
