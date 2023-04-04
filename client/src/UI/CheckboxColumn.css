@@ -1,0 +1,31 @@
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-column__label {
+  font-size: 40px;
+  color: #5f7f89;
+}
+
+.checkbox-column__item {
+  padding-left: 10px;
+}
+
+.checkbox-column__item input[type="checkbox"] {
+  accent-color: #34515c;
+  border-color: #1d4e60;
+  transform: scale(2);
+  margin: 20px;
+}
+
+.checkbox-column__item input[type="checkbox"]:checked {
+  background-color: #1d4e60;
+  border-color: #1d4e60;
+}
+
+.checkbox-column__text {
+  font-size: 20px;
+  color: #5f7f89;
+  margin-left: 4px;
+}

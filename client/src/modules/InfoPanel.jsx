@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useTheme } from "@material-ui/core/styles";
 import { TextField, TextareaAutosize } from "@material-ui/core";
+import InputFiled from "../UI/InputFiled";
 
 const InfoPanel = () => {
   const theme = useTheme();
@@ -12,7 +13,6 @@ const InfoPanel = () => {
     notes: "",
     addInfo: "",
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
