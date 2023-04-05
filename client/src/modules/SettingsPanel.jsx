@@ -16,6 +16,7 @@ const SettingsPanel = () => {
           backgroundColor: theme.palette.background.paper,
           width: "100%",
           borderRadius: 6,
+          border: theme.palette.border.primary,
           padding: theme.spacing(0.5),
         }}
       >

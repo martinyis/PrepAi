@@ -10,18 +10,28 @@
 
 .checkbox-column__item {
   padding-left: 10px;
+  margin-bottom: 20px;
 }
 
 .checkbox-column__item input[type="checkbox"] {
   accent-color: #34515c;
-  border-color: #1d4e60;
+  background-color: rgb(14, 43, 61, 1);
+  /* border-color: #1d4e60; */
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance: none;
+  border: 1px solid #0f4f5f;
+  border-radius: 2px;
+  height: 15px;
+  width: 15px;
   transform: scale(2);
-  margin: 20px;
+  margin-right: 20px;
 }
 
 .checkbox-column__item input[type="checkbox"]:checked {
   background-color: #1d4e60;
-  border-color: #1d4e60;
+  border: 3px solid rgb(14, 43, 61, 1);
+  outline: 1px solid #0f4f5f;
 }
 
 .checkbox-column__text {

@@ -22,6 +22,9 @@ const theme = createTheme({
     text: {
       primary: "rgb(113, 149, 160)",
     },
+    border: {
+      primary: "1px solid #0f4f5f",
+    },
   },
 });
 
