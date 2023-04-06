@@ -12,7 +12,7 @@ const CreatePrep = () => {
     <div>
       <Box
         sx={{
-          paddingTop: 30,
+          paddingTop: 20,
           paddingBottom: 50,
           backgroundColor: theme.palette.background.default,
           height: "100%",
@@ -22,15 +22,19 @@ const CreatePrep = () => {
           className="info__panels"
           sx={{
             px: {
-              xs: 5,
-              sm: 10,
-              md: 10,
+              xs: 2,
+              sm: 3,
+              md: 5,
+              lg: 10,
+              xl: 15,
             },
             display: "flex",
             gap: {
-              xs: theme.spacing(0.5), // set gap to 2 for screen sizes below sm
-              md: theme.spacing(1.5),
-              sm: theme.spacing(1), // set gap to 4 for screen sizes sm and up
+              xs: theme.spacing(0.3), // set gap to 2 for screen sizes below sm
+              sm: theme.spacing(0.5), // set gap to 4 for screen sizes sm and up
+              md: theme.spacing(1),
+              lg: theme.spacing(1.5),
+              xl: theme.spacing(2),
             },
             width: "100%",
             justifyContent: "center",

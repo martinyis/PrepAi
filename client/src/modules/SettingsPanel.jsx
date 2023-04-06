@@ -20,7 +20,12 @@ const SettingsPanel = () => {
           width: "100%",
           borderRadius: 6,
           border: theme.palette.border.primary,
-          padding: theme.spacing(0.5),
+          padding: {
+            xs: theme.spacing(0.2),
+            sm: theme.spacing(0.3),
+            md: theme.spacing(0.4),
+            xl: theme.spacing(0.5),
+          },
         }}
       >
         <CheckBoxes />
