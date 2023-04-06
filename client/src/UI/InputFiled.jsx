@@ -51,7 +51,8 @@ export default function SingleSelect() {
             backgroundColor: "#0f2031",
             borderRadius: 6,
             marginBottom: 25,
-            border: "1px solid #0f2031",
+            // border: "1px solid #0f2031",
+            border: "1px solid #0f4f5f",
             transition:
               "border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
             "&:hover": {
