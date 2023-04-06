@@ -49,8 +49,15 @@ const SettingsPanel = () => {
           Number of questions
         </Typography>
         <InputFiled />
-        <div style={{ maxWidth: "300px", margin: "0px auto" }}>
-          <StartButton text={"start"} />
+        <div
+          style={{
+            maxWidth: "300px",
+            margin: "0px auto",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <StartButton text={"CREATE PREP"} />
         </div>
       </Box>
     </>

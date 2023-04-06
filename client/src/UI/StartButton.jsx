@@ -7,10 +7,9 @@ const StartButton = (props) => {
       variant="contained"
       color="primary"
       sx={{
-        borderRadius: "10px",
-        width: "100%",
-        height: "75px",
-        marginTop: "25%",
+        width: "60%",
+        height: "40px",
+        marginTop: "20%",
         backgroundColor: "#235c72",
       }}
       style={{
