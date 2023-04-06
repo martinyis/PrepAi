@@ -7,6 +7,7 @@ import { TextField } from "@material-ui/core";
 import CheckBoxes from "../UI/CheckBoxes";
 import InputFiled from "../UI/InputFiled";
 import { Button } from "@mui/material";
+import StartButton from "../UI/StartButton";
 
 const SettingsPanel = () => {
   const theme = useTheme();
@@ -43,13 +44,9 @@ const SettingsPanel = () => {
           Number of questions
         </Typography>
         <InputFiled />
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ borderRadius: "10px", margin: "auto" }}
-        >
-          Create
-        </Button>
+        <div style={{ maxWidth: "300px", margin: "0px auto" }}>
+          <StartButton text={"start"} />
+        </div>
       </Box>
     </>
   );

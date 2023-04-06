@@ -9,7 +9,8 @@ const StartButton = (props) => {
       sx={{
         borderRadius: "10px",
         width: "100%",
-        height: "50px",
+        height: "75px",
+        marginTop: "25%",
         backgroundColor: "#235c72",
       }}
       style={{
