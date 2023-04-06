@@ -71,8 +71,14 @@ function NavBar(props) {
           </IconButton>
           <Typography
             variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            component={Link}
+            to="/"
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              textDecoration: "none",
+              color: "inherit",
+            }}
           >
             MUI
           </Typography>
@@ -82,9 +88,6 @@ function NavBar(props) {
                 {item}
               </Button>
             ))} */}
-            <Link to="/">
-              <Button sx={{ color: "#fff" }}>Home</Button>
-            </Link>
             <Link to="create">
               <Button sx={{ color: "#fff" }}>Create Prep</Button>
             </Link>
