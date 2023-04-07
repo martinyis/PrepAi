@@ -62,6 +62,12 @@ const InfoPanel = () => {
             name="courseHeight"
             value={formData.courseHeight}
             onChange={handleChange}
+            InputLabelProps={{
+              style: {
+                color: "#304855",
+                fontSize: "15px",
+              },
+            }}
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,
@@ -93,6 +99,12 @@ const InfoPanel = () => {
             name="topic"
             value={formData.topic}
             onChange={handleChange}
+            InputLabelProps={{
+              style: {
+                color: "#304855",
+                fontSize: "15px",
+              },
+            }}
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,

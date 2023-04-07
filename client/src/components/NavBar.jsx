@@ -56,9 +56,42 @@ function NavBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box className={classes.mainHeader} sx={{ display: "flex" }}>
+    <Box
+      className={classes.mainHeader}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        margin: "0px 120px 0px 120px",
+        px: {
+          xs: 2,
+          sm: 3,
+          md: 5,
+          lg: 10,
+          xl: 15,
+        },
+      }}
+    >
       <CssBaseline />
-      <AppBar color="primary" component="nav" theme={theme}>
+      <AppBar
+        color="primary"
+        component="nav"
+        theme={theme}
+        style={{
+          borderRadius: "0 0 100px 100px",
+          height: "75px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+        sx={{
+          px: {
+            xs: 2,
+            sm: 3,
+            md: 5,
+            lg: 10,
+            xl: 15,
+          },
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -89,10 +122,14 @@ function NavBar(props) {
               </Button>
             ))} */}
             <Link to="create">
-              <Button sx={{ color: "#fff" }}>Create Prep</Button>
+              <Button sx={{ color: "#a9d5de", fontSize: "15px" }}>
+                Create Prep
+              </Button>
             </Link>
             <Link to="result">
-              <Button sx={{ color: "#fff" }}>Result</Button>
+              <Button sx={{ color: "#a9d5de", fontSize: "15px" }}>
+                Result
+              </Button>
             </Link>
           </Box>
         </Toolbar>

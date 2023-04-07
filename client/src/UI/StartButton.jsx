@@ -14,6 +14,8 @@ const StartButton = (props) => {
       }}
       style={{
         backgroundColor: "#235c72",
+        color: "#9dcad4",
+        fontSize: "15px",
       }}
     >
       {text}
