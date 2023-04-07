@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CheckboxColumn.css";
 import { Typography } from "@material-ui/core";
-function CheckBoxes() {
-  const [overviewChecked, setOverviewChecked] = useState(false);
-  const [mainThesisChecked, setMainThesisChecked] = useState(false);
-  const [questionsChecked, setQuestionsChecked] = useState(false);
 
-  const handleOverviewChange = () => {
-    setOverviewChecked(!overviewChecked);
+function CheckBoxes(props) {
+  const { sendValues } = props;
+  const [checkedValues, setCheckedValues] = useState({
+    overview: false,
+    mainThesis: false,
+    questions: false,
+  });
+
+  const handleCheckboxChange = (event) => {
+    setCheckedValues({
+      ...checkedValues,
+      [event.target.name]: event.target.checked,
+    });
   };
-
-  const handleMainThesisChange = () => {
-    setMainThesisChecked(!mainThesisChecked);
-  };
-
-  const handleQuestionsChange = () => {
-    setQuestionsChecked(!questionsChecked);
-  };
-
+  //use effect to use sendValues
+  useEffect(() => {
+    sendValues(checkedValues);
+  }, [checkedValues]);
   return (
     <div className="checkbox-column">
       <Typography
@@ -32,24 +34,27 @@ function CheckBoxes() {
       <label className="checkbox-column__item">
         <input
           type="checkbox"
-          checked={overviewChecked}
-          onChange={handleOverviewChange}
+          name="overview"
+          checked={checkedValues.overview}
+          onChange={handleCheckboxChange}
         />
         <span className="checkbox-column__text">Overview</span>
       </label>
       <label className="checkbox-column__item">
         <input
           type="checkbox"
-          checked={mainThesisChecked}
-          onChange={handleMainThesisChange}
+          name="mainThesis"
+          checked={checkedValues.mainThesis}
+          onChange={handleCheckboxChange}
         />
         <span className="checkbox-column__text">Main Thesis</span>
       </label>
       <label className="checkbox-column__item">
         <input
           type="checkbox"
-          checked={questionsChecked}
-          onChange={handleQuestionsChange}
+          name="questions"
+          checked={checkedValues.questions}
+          onChange={handleCheckboxChange}
         />
         <span className="checkbox-column__text">Questions</span>
       </label>

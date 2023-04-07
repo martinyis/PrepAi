@@ -19,14 +19,17 @@ const MenuProps = {
 
 const numbers = Array.from(Array(20).keys()).map((n) => n + 1);
 
-export default function SingleSelect() {
+export default function SingleSelect(props) {
+  const { sendNumber, name } = props;
   const theme = useTheme();
   const [personName, setPersonName] = React.useState("");
-
   const handleChange = (event) => {
     setPersonName(event.target.value);
   };
-
+  //
+  React.useEffect(() => {
+    sendNumber(personName, name);
+  }, [personName]);
   // override the theme to customize the label color
   const customTheme = useTheme((outerTheme) => ({
     ...outerTheme,

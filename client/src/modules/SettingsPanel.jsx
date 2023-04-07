@@ -11,6 +11,24 @@ import StartButton from "../UI/StartButton";
 
 const SettingsPanel = () => {
   const theme = useTheme();
+  const [values, setValues] = useState({});
+  const [numbers, setNumber] = useState([]);
+  const getCheckBoxInfo = (values) => {
+    setValues(values);
+    console.log(values);
+  };
+
+  const getInputNumber = (number, name) => {
+    //if name is thesis then set numbers[0] to number
+    if (name === "thesis") {
+      setNumber([number, numbers[1]]);
+    }
+    //if name is questions then set numbers[1] to number
+    if (name === "questions") {
+      setNumber([numbers[0], number]);
+    }
+  };
+  console.log(numbers);
   return (
     <>
       <Box
@@ -28,7 +46,7 @@ const SettingsPanel = () => {
           },
         }}
       >
-        <CheckBoxes />
+        <CheckBoxes sendValues={getCheckBoxInfo} />
         <Typography
           style={{
             paddingBottom: 10,
@@ -38,7 +56,7 @@ const SettingsPanel = () => {
         >
           Number of thesis
         </Typography>
-        <InputFiled />
+        <InputFiled name="thesis" sendNumber={getInputNumber} />
         <Typography
           style={{
             paddingBottom: 10,
@@ -48,7 +66,7 @@ const SettingsPanel = () => {
         >
           Number of questions
         </Typography>
-        <InputFiled />
+        <InputFiled name="questions" sendNumber={getInputNumber} />
         <div
           style={{
             maxWidth: "300px",

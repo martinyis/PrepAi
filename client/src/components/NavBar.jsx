@@ -61,7 +61,7 @@ function NavBar(props) {
       sx={{
         display: "flex",
         justifyContent: "center",
-        margin: "0px 120px 0px 120px",
+        margin: "0px 1492px 0px 120px",
         px: {
           xs: 2,
           sm: 3,
@@ -76,6 +76,7 @@ function NavBar(props) {
         color="primary"
         component="nav"
         theme={theme}
+        maxWidth="xl"
         style={{
           borderRadius: "0 0 100px 100px",
           height: "75px",

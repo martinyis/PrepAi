@@ -13,7 +13,7 @@ const CreatePrep = () => {
       <Box
         sx={{
           paddingTop: 20,
-          paddingBottom: 50,
+          paddingBottom: 10,
           backgroundColor: theme.palette.background.default,
           height: "100%",
         }}
