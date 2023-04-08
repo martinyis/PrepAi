@@ -6,6 +6,10 @@ const theme = createTheme({
       color: "#496673",
       fontSize: "2rem",
     },
+    caption: {
+      color: "rgb(113, 149, 160)",
+      fontSize: "1.5rem",
+    },
   },
   palette: {
     primary: {
