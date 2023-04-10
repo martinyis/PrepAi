@@ -14,6 +14,7 @@ const About = () => {
         padding: "20px",
       }}
     >
+      <Typography variant="h1">About</Typography>
       <Typography
         variant="caption"
         style={{

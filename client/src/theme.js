@@ -2,9 +2,22 @@ import { createTheme } from "@material-ui/core/styles";
 const theme = createTheme({
   typography: {
     fontFamily: ["Cyntho Next", "Roboto", "Arial", "sans-serif"].join(","),
+    h1: {
+      color: "#496673",
+      fontSize: "3rem",
+    },
+    h2: {
+      color: "#496673",
+      fontSize: "2.5rem",
+    },
+
     h3: {
       color: "#496673",
       fontSize: "2rem",
+    },
+    h4: {
+      color: "#496673",
+      fontSize: "1.5rem",
     },
     caption: {
       color: "rgb(113, 149, 160)",
