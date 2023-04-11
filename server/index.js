@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { Configuration, OpenAIApi } = require("openai");
 //import key from .env
 const express = require("express");
@@ -18,6 +19,7 @@ const port = 5000;
 
 app.post("/", async (req, res) => {
   const { inputValue } = req.body;
+  console.log(inputValue);
   try {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
@@ -30,8 +32,6 @@ app.post("/", async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.json({ answer: "Sorry, something went wrong." });
-    console.log(inputValue);
   }
 });
 

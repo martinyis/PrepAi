@@ -9,31 +9,6 @@ import Steps from "../UI/Steps";
 import CreateButton from "../UI/CreateButton";
 const HomePage = () => {
   const theme = useTheme();
-  const [inputValue, setInputValue] = useState("");
-  const [answer, setAnswer] = useState("");
-  const handleSubmit = async (e) => {
-    console.log("starts");
-    e.preventDefault();
-    const response = await fetch("http://localhost:5000", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ inputValue: inputValue }),
-    });
-    const data = await response.json();
-    console.log(data.answer);
-    setInputValue("");
-    setAnswer(data.answer);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 13) {
-      setInputValue("");
-      handleSubmit(e);
-    }
-  };
-
   return (
     <div>
       <Box
@@ -55,21 +30,6 @@ const HomePage = () => {
           gap: 20,
         }}
       >
-        <div>
-          <Box sx={{ marginTop: 20 }}>
-            <FormControl>
-              <Typography variant="h4">{answer}</Typography>
-              <TextField
-                id="outlined-basic"
-                label="Outlined"
-                variant="outlined"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={handleKeyDown}
-              />
-            </FormControl>
-          </Box>
-        </div>
         <About />
         <Steps />
         <CreateButton />
