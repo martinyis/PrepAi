@@ -1,10 +1,14 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { Link, Typography } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
+
 const CreateButton = () => {
+  const navigate = useNavigate();
   return (
-    <Link to="create">
+//     <Link to="create">
       <Button
+        onClick={() => navigate("/create")}
         variant="contained"
         color="primary"
         sx={{
@@ -22,7 +26,7 @@ const CreateButton = () => {
       >
         Start
       </Button>
-    </Link>
+//     </Link>
   );
 };
 
