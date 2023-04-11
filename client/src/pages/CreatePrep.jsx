@@ -8,8 +8,10 @@ import SettingsPanel from "../modules/SettingsPanel";
 import FormControl from "@mui/material/FormControl";
 const CreatePrep = () => {
   const theme = useTheme();
+  const [clicked, setClicked] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [answer, setAnswer] = useState("");
+
   const handleSubmit = async (e) => {
     console.log("starts");
     e.preventDefault();

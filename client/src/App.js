@@ -10,6 +10,18 @@ import theme from "./theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
+  localStorage.setItem(
+    "prep-information",
+    JSON.stringify({
+      course: "",
+      topic: "",
+      notes: "",
+      info: "",
+      options: {},
+      numOfThesis: 0,
+      numOfQuestions: 0,
+    })
+  );
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
