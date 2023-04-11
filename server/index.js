@@ -1,12 +1,13 @@
-const { Configuration, OpenAIApi } = require('openai');
-const express = require('express');
+const { Configuration, OpenAIApi } = require("openai");
+//import key from .env
+const express = require("express");
 const configuration = new Configuration({
-  organization: 'org-rbaMvLZLKC7vPLKOY0myB4SQ',
-  apiKey: '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',
+  organization: "org-rbaMvLZLKC7vPLKOY0myB4SQ",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -15,11 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = 5000;
 
-app.post('/', async (req, res) => {
+app.post("/", async (req, res) => {
   const { inputValue } = req.body;
   try {
     const response = await openai.createCompletion({
-      model: 'text-davinci-003',
+      model: "text-davinci-003",
       prompt: `${inputValue}`,
       max_tokens: 500,
       temperature: 0,
@@ -29,7 +30,7 @@ app.post('/', async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.json({ answer: 'Sorry, something went wrong.' });
+    res.json({ answer: "Sorry, something went wrong." });
   }
 });
 
