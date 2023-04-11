@@ -28,10 +28,7 @@ app.post("/", async (req, res) => {
     res.json({
       answer: response.data.choices[0].text,
     });
-  } catch (error) {
-    console.log(error);
-    res.json({ answer: "Sorry, something went wrong." });
-  }
+  } catch (error) {}
 });
 
 app.listen(port, () => {
