@@ -27,6 +27,7 @@ app.post("/", async (req, res) => {
   //     max_tokens: 500,
   //     temperature: 0,
   //   });
+  //   console.log(response.data.choices[0].text);
   //   res.json({
   //     answer: response.data.choices[0].text,
   //   });

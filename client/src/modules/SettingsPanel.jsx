@@ -15,7 +15,6 @@ const SettingsPanel = () => {
   const [numbers, setNumber] = useState([]);
   const getCheckBoxInfo = (values) => {
     setValues(values);
-    console.log(values);
   };
 
   const getInputNumber = (number, name) => {
@@ -28,7 +27,6 @@ const SettingsPanel = () => {
       setNumber([numbers[0], number]);
     }
   };
-  console.log(numbers);
   return (
     <>
       <Box

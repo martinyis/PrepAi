@@ -18,7 +18,6 @@ const InfoPanel = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
   //console.log(all dat being typed)
-  console.log(formData);
   return (
     <Box
       className="info_panels-panel"
