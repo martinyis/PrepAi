@@ -13,15 +13,13 @@ function App() {
   localStorage.setItem(
     "prep-information",
     JSON.stringify({
-      course: "",
-      topic: "",
-      notes: "",
-      info: "",
+      data: {},
       options: {},
       numOfThesis: 0,
       numOfQuestions: 0,
     })
   );
+  // localStorage.clear();
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>

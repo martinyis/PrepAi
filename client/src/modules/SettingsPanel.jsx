@@ -15,19 +15,26 @@ const SettingsPanel = () => {
   const [numbers, setNumber] = useState([]);
   const getCheckBoxInfo = (values) => {
     setValues(values);
-    localStorage.setItem("checkbox-values", JSON.stringify(values));
+    setLocalInfo("options", values);
   };
-
+  const setLocalInfo = (property, value) => {
+    let prepInformation = JSON.parse(localStorage.getItem("prep-information"));
+    prepInformation[property] = value;
+    localStorage.setItem("prep-information", JSON.stringify(prepInformation));
+  };
   const getInputNumber = (number, name) => {
     //if name is thesis then set numbers[0] to number
     if (name === "thesis") {
       setNumber([number, numbers[1]]);
       localStorage.setItem("numOfThesis", number);
+      //setLocalInfo function
+      setLocalInfo("numOfThesis", number);
     }
     //if name is questions then set numbers[1] to number
     if (name === "questions") {
       setNumber([numbers[0], number]);
-      localStorage.setItem("numOfQuestions", number);
+      //setLocalInfo function
+      setLocalInfo("numOfQuestions", number);
     }
   };
 

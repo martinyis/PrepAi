@@ -16,8 +16,16 @@ const InfoPanel = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    setLocalInfo(formData);
   };
-  //console.log(all dat being typed)
+  const setLocalInfo = (data) => {
+    //get item from lcoalstorge ans replace object data with passed object
+    let prepInformation = JSON.parse(localStorage.getItem("prep-information"));
+    //change property data with data
+    prepInformation["data"] = data;
+    //set item to localstorage
+    localStorage.setItem("prep-information", JSON.stringify(prepInformation));
+  };
   return (
     <Box
       className="info_panels-panel"
