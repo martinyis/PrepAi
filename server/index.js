@@ -3,8 +3,8 @@ const { Configuration, OpenAIApi } = require("openai");
 //import key from .env
 const express = require("express");
 const configuration = new Configuration({
-  organization: "org-rbaMvLZLKC7vPLKOY0myB4SQ",
-  // apiKey: process.env.OPENAI_API_KEY,
+  organization: process.env.OPENAI_ORGANIZATION,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 const bodyParser = require("body-parser");
