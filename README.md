@@ -34,7 +34,7 @@ This project is still in the developing stage, so there are no examples yet.
 
 ## Contributors
 
-Currently, there is only one contributor to this project: [@martinyis](https://github.com/martinyis). We welcome additional contributors and hope to see more in the future!
+Currently, there is only one contributor to this project: [@martinyis](https://github.com/martinyis), [@GabrielMurry](https://github.com/GabrielMurry), [@KalebArmbrust](https://github.com/KalebArmbrust), [@3simransharma](https://github.com/3simransharma). We welcome additional contributors and hope to see more in the future!
 
 ## License
 
