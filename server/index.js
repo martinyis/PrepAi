@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 const port = 5000;
 
 app.post("/", async (req, res) => {
-  const { inputValue } = req.body;
-  console.log(inputValue);
+  const information = req.body;
+  console.log(typeof information.data.notes);
   // try {
   //   const response = await openai.createCompletion({
   //     model: "text-davinci-003",

@@ -1,9 +1,13 @@
 import React from "react";
 import { Button } from "@mui/material";
 const StartButton = (props) => {
-  const { text } = props;
+  const { text, handleSubmit } = props;
   return (
     <Button
+      onClick={() => {
+        console.log("click");
+        handleSubmit();
+      }}
       variant="contained"
       color="primary"
       sx={{

@@ -9,7 +9,8 @@ import InputFiled from "../UI/InputFiled";
 import { Button } from "@mui/material";
 import StartButton from "../UI/StartButton";
 
-const SettingsPanel = () => {
+const SettingsPanel = (props) => {
+  const { handleSubmit } = props;
   const theme = useTheme();
   const [values, setValues] = useState({});
   const [numbers, setNumber] = useState([]);
@@ -84,7 +85,7 @@ const SettingsPanel = () => {
             justifyContent: "center",
           }}
         >
-          <StartButton text={"CREATE PREP"} />
+          <StartButton handleSubmit={handleSubmit} text={"CREATE PREP"} />
         </div>
       </Box>
     </>
