@@ -12,10 +12,21 @@ const InfoPanel = () => {
     notes: "",
     addInfo: "",
   });
+
+  const [courseHeightLength, setCourseHeightLength] = useState(0); // added state variable
+  const [topicLength, setTopicLength] = useState(0); // added state variable
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
     setLocalInfo(formData);
+
+    // update the state variable for input length
+    if (name === "courseHeight") {
+      setCourseHeightLength(value.length);
+    } else if (name === "topic") {
+      setTopicLength(value.length);
+    }
   };
   const setLocalInfo = (data) => {
     let prepInformation = JSON.parse(localStorage.getItem("prep-information"));
@@ -85,7 +96,13 @@ const InfoPanel = () => {
                 borderRadius: 10,
               },
             }}
+            maxLength={50}
           />
+          {courseHeightLength > 50 && (
+            <Typography style={{ color: "red" }}>
+              Character has been exceeded more than 50
+            </Typography>
+          )}
           <Typography
             style={{
               paddingBottom: 10,
@@ -122,7 +139,13 @@ const InfoPanel = () => {
                 borderRadius: 10,
               },
             }}
+            maxLength={50} // added maxLength property
           />
+          {topicLength > 50 && (
+            <Typography style={{ color: "red" }}>
+              Character has been exceeded more than 50
+            </Typography>
+          )}
           <Typography
             style={{
               paddingBottom: 10,
