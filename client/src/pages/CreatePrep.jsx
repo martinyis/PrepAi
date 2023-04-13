@@ -1,15 +1,11 @@
-import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
-import { TextField } from "@material-ui/core";
 import InfoPanel from "../modules/InfoPanel";
 import SettingsPanel from "../modules/SettingsPanel";
-import FormControl from "@mui/material/FormControl";
 const CreatePrep = () => {
   const theme = useTheme();
   const [answer, setAnswer] = useState("");
-
   const handleSubmit = async (e) => {
     console.log("starts");
     const response = await fetch("http://localhost:5000", {
@@ -17,8 +13,6 @@ const CreatePrep = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      // body: JSON.stringify({ inputValue: inputValue }),
-      //sedn prep-information from localstorage
       body: localStorage.getItem("prep-information"),
     });
     const data = await response.json();

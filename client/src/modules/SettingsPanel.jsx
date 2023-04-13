@@ -3,10 +3,8 @@ import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
-import { TextField } from "@material-ui/core";
 import CheckBoxes from "../UI/CheckBoxes";
 import InputFiled from "../UI/InputFiled";
-import { Button } from "@mui/material";
 import StartButton from "../UI/StartButton";
 
 const SettingsPanel = (props) => {
@@ -24,17 +22,12 @@ const SettingsPanel = (props) => {
     localStorage.setItem("prep-information", JSON.stringify(prepInformation));
   };
   const getInputNumber = (number, name) => {
-    //if name is thesis then set numbers[0] to number
     if (name === "thesis") {
       setNumber([number, numbers[1]]);
-      localStorage.setItem("numOfThesis", number);
-      //setLocalInfo function
       setLocalInfo("numOfThesis", number);
     }
-    //if name is questions then set numbers[1] to number
     if (name === "questions") {
       setNumber([numbers[0], number]);
-      //setLocalInfo function
       setLocalInfo("numOfQuestions", number);
     }
   };

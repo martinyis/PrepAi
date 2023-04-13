@@ -3,7 +3,6 @@ import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useTheme } from "@material-ui/core/styles";
 import { TextField, TextareaAutosize } from "@material-ui/core";
-import InputFiled from "../UI/InputFiled";
 
 const InfoPanel = () => {
   const theme = useTheme();
@@ -19,11 +18,8 @@ const InfoPanel = () => {
     setLocalInfo(formData);
   };
   const setLocalInfo = (data) => {
-    //get item from lcoalstorge ans replace object data with passed object
     let prepInformation = JSON.parse(localStorage.getItem("prep-information"));
-    //change property data with data
     prepInformation["data"] = data;
-    //set item to localstorage
     localStorage.setItem("prep-information", JSON.stringify(prepInformation));
   };
   return (
