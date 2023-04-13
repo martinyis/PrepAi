@@ -3,7 +3,6 @@ import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useTheme } from "@material-ui/core/styles";
 import { TextField, TextareaAutosize } from "@material-ui/core";
-import InputFiled from "../UI/InputFiled";
 
 const InfoPanel = () => {
   const theme = useTheme();
@@ -146,6 +145,7 @@ const InfoPanel = () => {
             name="notes"
             value={formData.notes}
             onChange={handleChange}
+            maxLength={3000}
             style={{
               backgroundColor: "#0f2031",
               borderRadius: 6,
@@ -176,6 +176,7 @@ const InfoPanel = () => {
             name="addInfo"
             value={formData.addInfo}
             onChange={handleChange}
+            maxLength={1000}
             style={{
               padding: 15,
               backgroundColor: "#0f2031",
