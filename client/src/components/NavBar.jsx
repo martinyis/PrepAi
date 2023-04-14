@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -18,7 +19,8 @@ import { Link } from "react-router-dom";
 import { createTheme, makeStyles } from "@material-ui/core/styles";
 import theme from "../theme";
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["CREATE PREP", "RESULT"];
+const navNavigate = ["/create","/result"];
 
 const useStyles = makeStyles({
   mainHeader: {
@@ -29,22 +31,23 @@ function NavBar(props) {
   const classes = useStyles();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center",color:"#a9d5de"}}>
+      <Typography variant="h6" sx={{ my: 2, fontFamily:theme.typography.fontFamily }} onClick={() => {navigate("/");}}>
         MUI
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {navItems.map((item,index) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+            <ListItemButton sx={{ textAlign: "center"}} onClick={()=>{navigate(navNavigate[index])}}>
+              <ListItemText primary={item} primaryTypographyProps={{fontFamily: theme.typography.fontFamily}}/>
             </ListItemButton>
           </ListItem>
         ))}
