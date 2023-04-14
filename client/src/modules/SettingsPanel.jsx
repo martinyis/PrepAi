@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Typography } from "@material-ui/core";
 import { Box } from "@mui/system";
 import { useState } from "react";
@@ -6,8 +6,10 @@ import { useTheme } from "@material-ui/core/styles";
 import CheckBoxes from "../UI/CheckBoxes";
 import InputFiled from "../UI/InputFiled";
 import StartButton from "../UI/StartButton";
+import context from "../states/CheckBoxContext";
 
 const SettingsPanel = (props) => {
+  const {checkedValues,setCheckedValues}=useContext(context);
   const { handleSubmit } = props;
   const theme = useTheme();
   const [values, setValues] = useState({});
@@ -34,6 +36,7 @@ const SettingsPanel = (props) => {
 
   return (
     <>
+  
       <Box
         className="info_panels-panel"
         sx={{
@@ -50,6 +53,7 @@ const SettingsPanel = (props) => {
         }}
       >
         <CheckBoxes sendValues={getCheckBoxInfo} />
+      {checkedValues.mainThesis &&  <div>
         <Typography
           style={{
             paddingBottom: 10,
@@ -59,7 +63,8 @@ const SettingsPanel = (props) => {
         >
           Number of thesis
         </Typography>
-        <InputFiled name="thesis" sendNumber={getInputNumber} />
+        <InputFiled name="thesis" sendNumber={getInputNumber} /> </div>  }
+        {checkedValues.questions&&<div>
         <Typography
           style={{
             paddingBottom: 10,
@@ -70,6 +75,7 @@ const SettingsPanel = (props) => {
           Number of questions
         </Typography>
         <InputFiled name="questions" sendNumber={getInputNumber} />
+        </div> }
         <div
           style={{
             maxWidth: "300px",
@@ -81,6 +87,7 @@ const SettingsPanel = (props) => {
           <StartButton handleSubmit={handleSubmit} text={"CREATE PREP"} />
         </div>
       </Box>
+     
     </>
   );
 };

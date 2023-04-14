@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import "./CheckboxColumn.css";
 import { Typography } from "@material-ui/core";
-
+import context from "../states/CheckBoxContext";
 function CheckBoxes(props) {
   const { sendValues } = props;
-  const [checkedValues, setCheckedValues] = useState({
-    overview: false,
-    mainThesis: false,
-    questions: false,
-  });
+  const {checkedValues,setCheckedValues}=useContext(context);
 
   const handleCheckboxChange = (event) => {
     setCheckedValues({
@@ -21,6 +17,7 @@ function CheckBoxes(props) {
     sendValues(checkedValues);
   }, [checkedValues]);
   return (
+  
     <div className="checkbox-column">
       <Typography
         style={{
@@ -59,6 +56,7 @@ function CheckBoxes(props) {
         <span className="checkbox-column__text">Questions</span>
       </label>
     </div>
+ 
   );
 }
 
