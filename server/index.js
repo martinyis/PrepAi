@@ -19,7 +19,7 @@ const port = 5000;
 
 app.post("/", async (req, res) => {
   const information = req.body;
-  console.log(typeof information.data.notes);
+  console.log(information);
   // try {
   //   const response = await openai.createCompletion({
   //     model: "text-davinci-003",
