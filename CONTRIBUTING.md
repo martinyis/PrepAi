@@ -1,4 +1,4 @@
-# Document for Incoming Contributors
+# For Contributors
 
 Dear Incoming Contributor,
 
