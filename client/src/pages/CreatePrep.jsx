@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
 import InfoPanel from "../modules/InfoPanel";
 import SettingsPanel from "../modules/SettingsPanel";
+import CheckboxState from "../states/Checkboxstate";
 const CreatePrep = () => {
   const theme = useTheme();
   const [answer, setAnswer] = useState("");
@@ -59,7 +60,9 @@ const CreatePrep = () => {
           }}
         >
           <InfoPanel />
+          <CheckboxState>
           <SettingsPanel handleSubmit={handleSubmit} />
+          </CheckboxState>
         </Box>
       </Box>
     </div>
