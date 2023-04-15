@@ -32,7 +32,6 @@ function setMessage(obj) {
       ? ""
       : `\"questions\"- it is an object with with ${numOfQuestions} questions and answers to those questions,`;
 
-  //general prompt
   let prompt = `Hi ChatGpt, I want you to help me with preperation to my ${course} exam. Your task is to give me a json objext with different properties based on info I will provide below\nProperties: (${overview} ${thesis} ${questions}\nInfo: (course name - ${course}, topic - ${topic}, notes - \"${notes}\", ${addInfo} ). Here is prototype ${prototype}`;
   return prompt;
 }
