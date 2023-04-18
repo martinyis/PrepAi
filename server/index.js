@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { setMessage } = require("./functions/setMessage");
 const { Configuration, OpenAIApi } = require("openai");
 //import key from .env
 const express = require("express");
@@ -19,11 +20,12 @@ const port = 5000;
 
 app.post("/", async (req, res) => {
   const information = req.body;
-  console.log(information);
+  const newPrompt = setMessage(information);
+  console.log(newPrompt);
   // try {
   //   const response = await openai.createCompletion({
   //     model: "text-davinci-003",
-  //     prompt: `${inputValue}`,
+  //     prompt: "hi",
   //     max_tokens: 500,
   //     temperature: 0,
   //   });

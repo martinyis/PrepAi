@@ -1,0 +1,35 @@
+Hi ChatGpt, I want you to help me with preperation to my {course} exam. Your task is to give me a json objext with different properties based on info I will provide below
+Properties: ("overwiev"- overwiev about the exams based on info, "thesis"-it is array with {number of main thesis}, "questions"- it is an object with with {number} of questions and answers to those questions)
+Info: (course name - {coursename}, topic - {topic}, additional info - {} )
+
+//result
+
+--overwiev
+--thesse if yes
+--questions if yes
+
+
+
+
+Hi ChatGpt, I want you to help me with preperation to my {Java} exam. Your task is to give me a json objext with different properties based on info I will provide below
+Properties: ("overwiev"- overwiev about the exams based on info, "thesis"-it is array with {5}, "questions"- it is an object with with {5} of questions and answers to those questions)
+Info: (course name - {Java}, topic - {Fundamethals}, notes - {Important to know
+Why use it (and not)? What is the right application for this language (e.g. why use vs. other programming languages)
+Language characteristics (e.g. procedural,  object-oriented)
+What tools are available to develop and how you  work with it
+Good resources to learn, coding examples (e.g. hello world)
+Language features:
+Input/output (Keyboard, Screen, Files)
+Language-specific syntax
+Variables, primitive data types, and operations
+Strings
+Comments
+Conditional 
+Repetition
+Functions
+Typical data collections, i.e. arrays
+Common accepted practices for the language (e.g. Scanner in Java for input)
+}, additional info - {Long history, still popular and relevant after 20+ years
+General purpose, high-level language with simple syntax and a mild learning curve
+Large Java library
+} )

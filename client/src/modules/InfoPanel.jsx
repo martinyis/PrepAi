@@ -7,7 +7,7 @@ import { TextField, TextareaAutosize } from "@material-ui/core";
 const InfoPanel = () => {
   const theme = useTheme();
   const [formData, setFormData] = useState({
-    courseHeight: "",
+    course: "",
     topic: "",
     notes: "",
     addInfo: "",
@@ -63,8 +63,8 @@ const InfoPanel = () => {
             variant="outlined"
             id="course-height-input"
             label="Course Height"
-            name="courseHeight"
-            value={formData.courseHeight}
+            name="course"
+            value={formData.course}
             onChange={handleChange}
             InputLabelProps={{
               style: {
