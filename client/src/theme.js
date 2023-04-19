@@ -10,7 +10,6 @@ const theme = createTheme({
       color: "#496673",
       fontSize: "2.5rem",
     },
-
     h3: {
       color: "#496673",
       fontSize: "2rem",
@@ -20,6 +19,10 @@ const theme = createTheme({
       fontSize: "1.5rem",
     },
     caption: {
+      color: "rgb(113, 149, 160)",
+      fontSize: "1.5rem",
+    },
+    body1: {
       color: "rgb(113, 149, 160)",
       fontSize: "1.5rem",
     },
