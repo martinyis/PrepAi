@@ -59,6 +59,7 @@ const InfoPanel = () => {
             Course
           </Typography>
           <TextField
+            inputProps={{ maxLength: 50 }}
             fullWidth
             variant="outlined"
             id="course-height-input"
@@ -96,6 +97,7 @@ const InfoPanel = () => {
             Topic
           </Typography>
           <TextField
+            inputProps={{ maxLength: 50 }}
             fullWidth
             variant="outlined"
             id="topic-input"
