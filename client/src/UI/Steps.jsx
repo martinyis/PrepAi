@@ -20,12 +20,36 @@ const Steps = () => {
       }}
     >
       <Typography variant="h2">How to use?</Typography>
-      <Typography variant="h4">1. Click on the Create Button</Typography>
-      <Typography variant="h4">
-        2. Insert information about your course
-      </Typography>
-      <Typography variant="h4">3. Pick options for getting a result</Typography>
-      <Typography variant="h4">4. Start your prep</Typography>
+      <div style={{ color: "#888" }} className="steps">
+
+        <div className="checkpoint">
+          <div>
+          <Typography variant="h4">1. Click on the Create Button</Typography>
+            <Typography variant="caption">or go to Create prep</Typography>
+          </div>
+        </div>
+
+        <div className="checkpoint">
+          <div>
+          <Typography variant="h4">2. Insert information about your course</Typography>
+            <Typography variant="caption">Input your Course, Topics, Notes etc</Typography>
+          </div>
+        </div>
+
+        <div className="checkpoint">
+          <div>
+          <Typography variant="h4">3. Pick options for getting a result</Typography>
+            <Typography variant="caption">Select your number of questions and Theses etc</Typography>
+          </div>
+        </div>
+
+        <div className="checkpoint">
+          <div>
+          <Typography variant="h4">4. Start your prep</Typography>
+          </div>
+        </div>
+        
+      </div>
     </div>
   );
 };
