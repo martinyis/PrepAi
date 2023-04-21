@@ -39,7 +39,7 @@ const Steps = () => {
         <div className="checkpoint">
           <div>
           <Typography variant="h4">3. Pick options for getting a result</Typography>
-            <Typography variant="caption">Select your number of questions and Theses etc</Typography>
+            <Typography variant="caption">Select your number of questions and thesis etc</Typography>
           </div>
         </div>
 
