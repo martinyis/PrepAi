@@ -18,7 +18,7 @@ const Footer = () => {
         justifyContent: "center",
       }}
     >
-      Hi
+      Footer
     </Box>
   );
 };
