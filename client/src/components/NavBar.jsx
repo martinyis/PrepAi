@@ -20,7 +20,7 @@ import { createTheme, makeStyles } from "@material-ui/core/styles";
 import theme from "../theme";
 const drawerWidth = 240;
 const navItems = ["CREATE PREP", "RESULT"];
-const navNavigate = ["/create","/result"];
+const navNavigate = ["/create", "/result"];
 
 const useStyles = makeStyles({
   mainHeader: {
@@ -38,16 +38,35 @@ function NavBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center",color:"#a9d5de"}}>
-      <Typography variant="h6" sx={{ my: 2, fontFamily:theme.typography.fontFamily }} onClick={() => {navigate("/");}}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", color: "#a9d5de" }}
+    >
+      <Typography
+        variant="h6"
+        sx={{ my: 2, fontFamily: theme.typography.fontFamily }}
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         MUI
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item,index) => (
+        {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center"}} onClick={()=>{navigate(navNavigate[index])}}>
-              <ListItemText primary={item} primaryTypographyProps={{fontFamily: theme.typography.fontFamily}}/>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => {
+                navigate(navNavigate[index]);
+              }}
+            >
+              <ListItemText
+                primary={item}
+                primaryTypographyProps={{
+                  fontFamily: theme.typography.fontFamily,
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -120,11 +139,6 @@ function NavBar(props) {
             MUI
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {/* {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))} */}
             <Link to="create">
               <Button sx={{ color: "#a9d5de", fontSize: "15px" }}>
                 Create Prep
