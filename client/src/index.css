@@ -68,3 +68,25 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+/* How to use componete */
+.TimelineContent--right,
+.TimelineContent--left{
+  padding: 6px 12px; 
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.TimelineContent--left{
+  justify-content: flex-end;
+}
+.TimelineDot{
+  background: transparent!important; 
+  padding: 0.5rem!important;
+  box-shadow: 0px 0px 0.2rem #000!important;
+}
+
+.TimelineIcons{
+  font-size: 2rem!important;
+  color: #496673!important;
+}
