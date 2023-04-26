@@ -13,93 +13,47 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
+const timelineContent = [
+  {
+    id:10,
+    title:"Click on the Create Button",
+    Icon: MouseIcon
+  },
+  {
+    id:11,
+    title:"Insert information about your course",
+    Icon: InsertCommentIcon
+  },
+  {
+    id:12,
+    title:"Pick options for getting a result",
+    Icon: SettingsIcon
+  },
+  {
+    id:13,
+    title:"Start your prep",
+    Icon: PlayCircleFilledIcon
+  },
+];
 
-const CustomizedTimeline = () => {
+
+const TimeLineItem = ({ title, Icon, index }) => {
   return (
-    <Timeline position="alternate" sx={{maxWidth:"1000px",width:{xs:"auto",sm:"500px",lg:"1000px"}}}>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0', color:"#496673" }}
-          align="right"
-          variant="body1"
-          color="text.secondary"
-        >
-          First Step
-        </TimelineOppositeContent>
+    <TimelineItem>
         <TimelineSeparator >
           <TimelineDot className="TimelineDot">
-            <MouseIcon className="TimelineIcons"/>
+            <Icon className="TimelineIcons"/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className="TimelineContent--right">
-          <Typography>Click on the Create Button</Typography>
+        <TimelineContent className={`TimelineContent--${index === 0 || index === 2 ? "right" : "left"}`}>
+          <Typography>{title}</Typography>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0', color:"#496673" }}
-          variant="body2"
-          color="text.secondary"
-        >
-          Second Step
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot className="TimelineDot" >
-            <InsertCommentIcon className="TimelineIcons"/>
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent className="TimelineContent--left">
-          <Typography>Insert information about your course</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-         <TimelineOppositeContent
-          sx={{ m: 'auto 0', color:"#496673" }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          Third Step
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector/>
-          <TimelineDot className="TimelineDot" >
-            <SettingsIcon className="TimelineIcons"/>
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent className="TimelineContent--right">
-          <Typography>Pick options for getting a result</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0', color:"#496673" }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          Last Step
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector/>
-          <TimelineDot className="TimelineDot" >
-            <PlayCircleFilledIcon className="TimelineIcons"/>
-          </TimelineDot>
-        </TimelineSeparator>
-        <TimelineContent className="TimelineContent--left">
-          <Typography>Start your prep</Typography>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
-  );
-}
+  )
+};
 
 
 
@@ -122,7 +76,9 @@ const Steps = () => {
       }}
     >
       <Typography variant="h2">How to use?</Typography>
-      <CustomizedTimeline/>
+      <Timeline position="alternate" sx={{ maxWidth:"1000px", width:{xs:"auto", sm:"500px", lg:"1000px" }}}>
+      {timelineContent?.map((item,index) => <TimeLineItem key={item.id} {...item} index={index} />)}
+      </Timeline>
     </Stack>
   );
 };
