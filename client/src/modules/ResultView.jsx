@@ -15,7 +15,6 @@ const ResultView = (props) => {
         variant="h1"
         align="center"
         style={{
-          //icnrefotnsize
           fontSize: "3rem",
         }}
       >
