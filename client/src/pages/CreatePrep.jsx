@@ -43,8 +43,8 @@ const CreatePrep = () => {
             },
             display: "flex",
             gap: {
-              xs: theme.spacing(0.3), // set gap to 2 for screen sizes below sm
-              sm: theme.spacing(0.5), // set gap to 4 for screen sizes sm and up
+              xs: theme.spacing(0.3),
+              sm: theme.spacing(0.5),
               md: theme.spacing(1),
               lg: theme.spacing(1.5),
               xl: theme.spacing(2),
@@ -53,7 +53,7 @@ const CreatePrep = () => {
             justifyContent: "center",
             height: "100%",
             flexDirection: {
-              xs: "column", // set flex-direction to column for screen sizes below sm
+              xs: "column",
               sm: "row",
               md: "row",
             },
@@ -61,7 +61,7 @@ const CreatePrep = () => {
         >
           <InfoPanel />
           <CheckboxState>
-          <SettingsPanel handleSubmit={handleSubmit} />
+            <SettingsPanel handleSubmit={handleSubmit} />
           </CheckboxState>
         </Box>
       </Box>
