@@ -166,7 +166,7 @@ function NavBar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              background: "rgb(12, 51, 52, 1)",
+              background: "#0a3c4a",
             },
           }}
         >
