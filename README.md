@@ -34,7 +34,7 @@ This project is still in the developing stage, so there are no examples yet.
 
 ## Contributors
 
-Currently, there is only one contributor to this project: [@martinyis](https://github.com/martinyis), [@GabrielMurry](https://github.com/GabrielMurry), [@KalebArmbrust](https://github.com/KalebArmbrust), [@3simransharma](https://github.com/3simransharma). We welcome additional contributors and hope to see more in the future!
+Currently, there is only one contributor to this project: [@martinyis](https://github.com/martinyis), [@GabrielMurry](https://github.com/GabrielMurry), [@KalebArmbrust](https://github.com/KalebArmbrust), [@3simransharma](https://github.com/3simransharma), [@SamarendraGouda](https://github.com/SamarendraGouda), [@sky_de_1991](https://github.com/Sky-De), [@Yuva0](https://github.com/Yuva0), []. We welcome additional contributors and hope to see more in the future!
 
 ## License
 
