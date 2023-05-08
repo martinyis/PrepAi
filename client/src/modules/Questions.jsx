@@ -9,7 +9,18 @@ const Questions = (props) => {
   const { questions } = props;
   return (
     <div>
+      <Typography
+        variant="h2"
+        align="center"
+        style={{
+          fontSize: "3rem",
+        }}
+      >
+        Questions
+      </Typography>
       {questions.map((question, id) => (
+        //Questions
+
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
