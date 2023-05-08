@@ -29,7 +29,7 @@ const Theses = (props) => {
                 letterSpacing: "0.03rem",
                 lineHeight: "2em",
                 textAlign: "left",
-                fontSize: "2rem",
+                fontSize: "1.2rem",
               }}
             >
               {id + 1} {thesis}
