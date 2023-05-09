@@ -19,8 +19,6 @@ const Questions = (props) => {
         Questions
       </Typography>
       {questions.map((question, id) => (
-        //Questions
-
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
