@@ -11,7 +11,7 @@ const Footer = () => {
           lg: 10,
           xl: 15,
         },
-        backgroundColor: "rgb(10, 60, 74, 0.4)",
+        backgroundColor: "rgb(10, 60, 74, 0.1)",
         height: "100px",
         display: "flex",
         justifyContent: "center",
