@@ -25,7 +25,7 @@ const ResultPage = () => {
       <Box
         sx={{
           paddingTop: 20,
-          paddingBottom: 100,
+          paddingBottom: 20,
           backgroundColor: theme.palette.background.default,
           height: "100%",
           px: {
