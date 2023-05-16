@@ -14,6 +14,7 @@ const Questions = (props) => {
         align="center"
         style={{
           fontSize: "3rem",
+          paddingBottom: "3rem",
         }}
       >
         Questions
