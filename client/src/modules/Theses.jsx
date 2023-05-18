@@ -9,6 +9,8 @@ const Theses = (props) => {
         display: "flex",
         flexDirection: "column",
         gap: 20,
+        maxWidth: 800,
+        margin: "auto",
       }}
     >
       <Typography
