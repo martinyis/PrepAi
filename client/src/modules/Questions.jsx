@@ -8,7 +8,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const Questions = (props) => {
   const { questions } = props;
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        maxWidth: 800,
+        margin: "auto",
+      }}
+    >
       <Typography
         variant="h2"
         align="center"
