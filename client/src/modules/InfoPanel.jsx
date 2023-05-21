@@ -96,7 +96,7 @@ const InfoPanel = () => {
             Topic
           </Typography>
           <TextField
-            inputProps={{ maxLength: 50 }}
+            inputProps={{ maxLength: 60 }}
             fullWidth
             variant="outlined"
             id="topic-input"
