@@ -29,7 +29,6 @@ const CreatePrep = () => {
           paddingBottom: 10,
           backgroundColor: theme.palette.background.default,
           height: "100%",
-          //hover
           "&:hover": {
             backgroundColor: theme.palette.background.default,
           },
