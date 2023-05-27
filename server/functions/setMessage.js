@@ -35,5 +35,4 @@ function setMessage(obj) {
   return prompt;
 }
 
-//export fucntion
 module.exports = { setMessage };
